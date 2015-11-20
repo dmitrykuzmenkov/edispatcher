@@ -1,0 +1,19 @@
+{
+  "name": "edispatcher",
+  "version": "1.0.0",
+  "description": "Tiny dependency free event dispatcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitrykuzmenkov/edispatcher.git"
+  },
+  "author": "Dmitry Kuzmenkov <dmitry@wagh.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dmitrykuzmenkov/edispatcher/issues"
+  },
+  "homepage": "https://github.com/dmitrykuzmenkov/edispatcher#readme"
+}
