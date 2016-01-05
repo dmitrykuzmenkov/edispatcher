@@ -1,7 +1,8 @@
 {
   "name": "edispatcher",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny dependency free event dispatcher",
+  "keywords": ["dispatcher", "event", "handle", "observable", "emit", "edispatcher"],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
