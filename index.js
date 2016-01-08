@@ -1,11 +1,10 @@
 module.exports = {
   subscribers: {},
 
-  on: function(event_name, callback) {
-      (this.subscribers[event_name] = this.subscribers[event_name] || []).push(
-        callback
-      );
-      return callback;
+  on: function(event, callback) {
+    var cb = Function.prototype.bind(callback);
+    (this.subscribers[event] = this.subscribers[event] || []).push(cb);
+    return cb;
   },
 
   off: function(id) {
