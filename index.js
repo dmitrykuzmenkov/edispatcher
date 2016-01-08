@@ -1,8 +1,7 @@
 module.exports = {
   subscribers: {},
 
-  on: function(event, callback) {
-    var cb = Function.prototype.apply.bind(callback);
+  on: function(event, cb) {
     (this.subscribers[event] = this.subscribers[event] || []).push(cb);
     return cb;
   },
