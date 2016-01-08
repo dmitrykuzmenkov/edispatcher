@@ -8,8 +8,8 @@ module.exports = {
   },
 
   off: function(id) {
-    for (var event_name in this.subscribers) {
-      var event_subscribers = this.subscribers[event_name];
+    for (var event in this.subscribers) {
+      var event_subscribers = this.subscribers[event];
       for (var i = 0; i < event_subscribers.length; i++) {
         if (event_subscribers[i] === id) {
           event_subscribers.splice(i, 1);
@@ -22,11 +22,11 @@ module.exports = {
     return this.on("*", callback);
   },
 
-  send: function(event_name, data, source) {
+  send: function(event, data, source) {
     var event_subscribers =
-      (this.subscribers[event_name] || []).concat(this.subscribers["*"] || []);
+      (this.subscribers[event] || []).concat(this.subscribers["*"] || []);
     for (var i = 0; i < event_subscribers.length; i++) {
-      event_subscribers[i](event_name, data, source, event_subscribers);
+      event_subscribers[i](event, data, source, event_subscribers);
     }
   }
 };
