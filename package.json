@@ -1,6 +1,6 @@
 {
   "name": "edispatcher",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Tiny dependency free event dispatcher",
   "keywords": ["dispatcher", "event", "handle", "observable", "emit", "edispatcher", "observer", "subscriber"],
   "main": "index.js",

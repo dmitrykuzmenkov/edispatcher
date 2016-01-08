@@ -2,7 +2,7 @@ module.exports = {
   subscribers: {},
 
   on: function(event, callback) {
-    var cb = Function.prototype.bind(callback);
+    var cb = Function.prototype.apply.bind(callback);
     (this.subscribers[event] = this.subscribers[event] || []).push(cb);
     return cb;
   },
